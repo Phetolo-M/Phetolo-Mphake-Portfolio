@@ -1,0 +1,75 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffd0 !important;
+}
+
+.nav-link {
+  color: #aaa !important;
+}
+
+.nav-link:hover {
+  color: #00ffd0 !important;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #1c1c1c, #222831);
+  border-bottom: 3px solid rgba(0, 255, 208, 0.3);
+  position: relative;
+}
+
+.hero-img {
+  border: 5px solid rgba(0, 255, 208, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 208, 0.3);
+  max-height: 400px;
+}
+
+/* Sections */
+section h2 {
+  color: #00ffd0;
+  border-bottom: 2px solid #00ffd0;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 255, 208, 0.1);
+  color: #ccc;
+}
+
+.card-title {
+  color: #00ffd0;
+}
+
+/* Links */
+a {
+  color: #00ffd0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Image */
+img {
+  max-width: 100%;
+  height: auto;
+}

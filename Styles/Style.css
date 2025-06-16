@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.navbar {
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00ffd0 !important;
+}
+
+.nav-link {
+  color: #aaa !important;
+}
+
+.nav-link:hover {
+  color: #00ffd0 !important;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #1c1c1c, #222831);
+  border-bottom: 3px solid rgba(0, 255, 208, 0.3);
+  position: relative;
+}
+
+.hero-img {
+  border: 5px solid rgba(0, 255, 208, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 208, 0.3);
+  max-height: 400px;
+}
+
+section h2 {
+  color: #00ffd0;
+  border-bottom: 2px solid #00ffd0;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 255, 208, 0.1);
+  color: #ccc;
+}
+
+.card-title {
+  color: #00ffd0;
+}
+
+.hover-video video {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.hover-video:hover video {
+  transform: scale(1.05);
+  outline: 2px solid #00ffd0;
+}
+
+.hover-video video {
+  display: none;
+  transition: transform 0.4s ease;
+}
+
+.hover-video:hover video {
+  display: block;
+  transform: scale(1.05);
+}
+
+.video-preview .project-video {
+  transition: transform 0.4s ease;
+  object-fit: cover;
+}
+
+.video-preview:hover .project-video {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+

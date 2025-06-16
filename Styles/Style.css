@@ -97,3 +97,44 @@ section h2 {
   cursor: pointer;
 }
 
+.cv-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00ffd0;
+  color: #121212;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(0, 255, 208, 0.5);
+  text-decoration: none;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cv-float-btn:hover {
+  background-color: #00c4a7;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.cv-float-btn i {
+  font-size: 1.2rem;
+}
+
+/* Responsive text for small screens */
+@media (max-width: 576px) {
+  .cv-float-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+
+  .cv-float-btn i {
+    font-size: 1rem;
+  }
+}

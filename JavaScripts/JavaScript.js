@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Portfolio script loaded.");
 
+  // Smooth scroll
   document.querySelectorAll("a.nav-link").forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -11,10 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Particle canvas setup
   const canvas = document.getElementById("particle-canvas");
   const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  resizeCanvas(); // Initial size
+  window.addEventListener("resize", resizeCanvas); // Resize on window change
 
   const chars = ["<", "{", "}", "/", "=", ";", ":", ".", "🎮", "⚙️"];
   const particles = [];
@@ -33,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function drawParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.font = "bold 20px Orbitron";
     ctx.fillStyle = "rgba(0, 255, 208, 0.7)";
     particles.forEach(p => {
       ctx.globalAlpha = p.opacity;
@@ -47,15 +54,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   drawParticles();
-});
 
-document.querySelectorAll('.video-preview video').forEach(video => {
-  video.addEventListener('mouseenter', () => {
-    video.play();
+  // Hover to play video
+  document.querySelectorAll('.video-preview video').forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      if (!video.hasAttribute('autoplay')) video.play();
+    });
+
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
   });
 
-  video.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0; // rewind to start if needed
-  });
+  // Floating CV Button
+  const btn = document.querySelector(".cv-float-btn");
+  if (btn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        btn.classList.add("show");
+        btn.classList.remove("hidden");
+      } else {
+        btn.classList.remove("show");
+        btn.classList.add("hidden");
+      }
+    });
+  }
 });

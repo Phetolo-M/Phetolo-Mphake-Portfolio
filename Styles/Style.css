@@ -138,3 +138,80 @@ section h2 {
     font-size: 1rem;
   }
 }
+
+
+.cv-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00ffd0;
+  color: #121212;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(0, 255, 208, 0.5);
+  text-decoration: none;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.cv-float-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 576px) {
+  .cv-float-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+
+  .cv-float-btn i {
+    font-size: 1rem;
+  }
+}
+
+
+.cv-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #00ffd0;
+  color: #121212;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 255, 208, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.cv-float-btn i {
+  margin-right: 8px;
+}
+
+.cv-float-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cv-float-btn.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  pointer-events: none;
+}
+
+
